@@ -27,6 +27,7 @@ export default {
       return this.$route.path.indexOf(this.path) !== -1
     },
     styleTextColor() {
+      console.log(this.textColor)
       return this.isActive === true ? {color: this.textColor} : {}
     }
   },
@@ -43,6 +44,10 @@ export default {
 #tab-bar-item {
   flex: 1;
   text-align: center;
+}
+
+.img-box img {
+  width: 44%;
 }
 
 </style>
