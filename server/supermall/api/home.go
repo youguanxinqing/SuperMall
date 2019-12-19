@@ -1,4 +1,4 @@
-package views
+package api
 
 import (
 	"supermall/service"

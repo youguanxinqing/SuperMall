@@ -2,7 +2,6 @@ package service
 
 import (
 	"supermall/config"
-	"supermall/db"
 	"supermall/tools"
 
 	"github.com/kataras/iris/v12"
@@ -10,14 +9,15 @@ import (
 
 // GetSwiperImg 组装轮播图相关数据
 func makeSwiperImg(dir string) (res []iris.Map) {
-	imgs, err := db.BindImgsByDir(dir)
+	imgs, err := tools.BindHyperImgsByDir(dir)
 	if err != nil {
 		return []iris.Map{}
 	}
 
 	for _, img := range imgs {
 		res = append(res, iris.Map{
-			"link": tools.NormalPathToURL(img.Path),
+			"image": tools.NormalPathToURL(img.Image),
+			"link":  img.Link,
 		})
 	}
 	return

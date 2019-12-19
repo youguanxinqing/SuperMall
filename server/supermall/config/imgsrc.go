@@ -7,3 +7,11 @@ package config
 
 // SwiperImgDIr 轮播图目录
 const SwiperImgDIr = "static|img|swiper"
+
+// ImgURLMap ...
+var ImgURLMap = map[string]string{
+	"swiper01": "/",
+	"swiper02": "/",
+	"swiper03": "/",
+	"swiper04": "/",
+}

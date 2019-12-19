@@ -1,30 +1,15 @@
 package main
 
 import (
-	"github.com/kataras/iris/v12"
+	"fmt"
+	"supermall/config"
+	"supermall/server"
 
-	"supermall/middleware"
-	"supermall/views"
+	"github.com/kataras/iris/v12"
 )
 
-func init() {
-}
-
 func main() {
-	app := iris.Default()
-
-	// 中间件设置
-	app.Use(middleware.AccessControlAllowOrigin)
-
-	/* 注册路由 */
-
-	// 静态资源
-	app.Get("/static/{filepath:path}", views.StaticResource)
-
-	// 动态资源
-	app.PartyFunc("/home", func(home iris.Party) {
-		home.Get("/multidata", views.HomeMultiData)
-	})
-
-	app.Run(iris.Addr(":8081"))
+	app := server.NewApplication()
+	addr := fmt.Sprintf("%s:%d", config.ServerHost, config.ServerPort)
+	app.Run(iris.Addr(addr))
 }
