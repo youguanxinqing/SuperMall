@@ -1,5 +1,4 @@
-<template>
-  <div id="app">
+<template> <div id="app">
     <router-view></router-view>
     <tab-bar></tab-bar>
   </div>
@@ -12,10 +11,15 @@ export default {
   name: 'app',
   components: {
     TabBar,
-  }
+  },
+  data() {
+    return {
+    }
+  },
 }
 </script>
 
 <style>
-  @import "assets/css/base.css";
+@import "assets/css/base.css";
+
 </style>

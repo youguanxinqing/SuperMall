@@ -27,7 +27,6 @@ export default {
       return this.$route.path.indexOf(this.path) !== -1
     },
     styleTextColor() {
-      console.log(this.textColor)
       return this.isActive === true ? {color: this.textColor} : {}
     }
   },
