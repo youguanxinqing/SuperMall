@@ -1,19 +1,47 @@
-# supermall
+# 说明
 
-## Project setup
-```
+现在时间是 019.12.21 13时38分。
+
+supermall 是我初学 vue 时跟着 b 站的一个教学视频（[(新)2019Vue、Vuejs最详细教程-入门到项目实战](https://www.bilibili.com/video/av59594689/)）写的。暂时还没写完，当然咯，视频也没看完。
+
+视频从基础讲起，中间会穿插一些 es6 语法，最后会是一个完整项目。整个过程的代码阿婆主没有直接提供，需要加微信，需要……我觉得这些都是无可厚非的事儿，就看你没有没有这样一个需求了。我作为一个毕业半年且从事编程的人来说，后台代码可以自己写，部分问题可以谷歌，实在不行了还能问问前端同事。所以除了视频再没有其他额外资料了，这意味着最后做出的东西与视频会有部分差异——说白了就是没那么完美。
+
+可是“完美”，我已经清楚地了解到，我的世界里不会有完美。我想赶紧做一个东西出来，熟悉 vue 的使用。同时后台用 golang 写（工作使用 python），熟悉 golang 的使用。
+
+在实践的过程中，我渐渐发现自己在组件封装能力上，golang 的模块设计上力不从心。事实上，使用 python 开发的时候自己还能做一些“不伦不类”的代码设计，现在换了两种语言，深感难上难。用同事的原话：**基础不好**。正因为基础不好，我才需要参与项目从 0 到 1 的过程。项目可以先来简单的，然后复杂的，最后是原创。慢慢来，好多东西急也急不出个结果。
+
+所以为什么要学习 vue 呢？事实上是兴趣使然，另一个原因是看到拉钩招聘上很多 python 后端都要求会 vue。
+
+所以为什么要用 golang 写后台呢？其实也是兴趣使然，再一个原因就是同组的大佬告诉我现在好多招 python 的都要求会 golang（没有求证）。
+
+既然兴趣在此，还有利于以后跳槽，何乐而不为呢！
+
+最后感谢我的前端同事[lsbbd](https://github.com/lsbbd)，在这个项目中给予我许多帮助。
+
+## Usage
+
+前端：
+- Project setup
+```bash
 npm install
 ```
-
-### Compiles and hot-reloads for development
-```
+- Compiles and hot-reloads for development
+```bash
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
+- Compiles and minifies for production
+```bash
 npm run build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+后端(supermall/server/supermall)：
+- Run code
+```bash
+go run main.go
+```
+
+注：之所以前后端放在一个仓库，主要是为了方便。
+
+## 额外
+
+1. 由于能力有限，在布局上还做不到各种适配，前端显示效果暂时只能支持 **Galaxy S5(360x640) 100%**。以后再来改。
