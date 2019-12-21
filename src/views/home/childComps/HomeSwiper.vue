@@ -3,8 +3,7 @@
     <Swiper 
       :swiper-width="styleSwiperSize.width" 
       :swiper-height="styleSwiperSize.height"
-    >
-      <SwiperItem 
+    ><SwiperItem 
         v-for="(item, index) in banners" 
         :key="index" 
         :swiper-item-link="item.link" 
@@ -16,18 +15,22 @@
 
 <script>
 
-import { getHomeMultiData } from 'network/home'
 import { Swiper, SwiperItem } from 'components/common/swiper'
 
 export default {
   name: "HomeSwiper",
+  props: {
+    banners: {
+      type: Array,
+      default: []
+    }
+  },
   components: {
     Swiper,
     SwiperItem
   },
   data() {
     return {
-      banners: [],
       // 轮播图图片尺寸设置
       styleSwiperSize: {
         width: "360px",
@@ -35,16 +38,6 @@ export default {
       }
     }
   },
-  created() {
-    getHomeMultiData()
-    .then(resp => {
-      this.banners = resp.data.banner
-      this.recommands = resp.data.recommand
-    })
-    .catch(err => {
-      console.log(err)
-    })
-  }
 }
 </script>
 

@@ -14,10 +14,10 @@ func HomeMultiData(ctx iris.Context) {
 	ctx.JSON(iris.Map{
 		"status": "ok",
 		"data": iris.Map{
-			"banner":    banner,
-			"dKeyword":  dKeyword,
-			"keywords":  keywords,
-			"recommend": recommend,
+			"banners":    banner,
+			"dKeyword":   dKeyword,
+			"keywords":   keywords,
+			"recommands": recommend,
 		},
 	})
 }

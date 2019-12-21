@@ -7,7 +7,7 @@ type Img struct {
 
 // HyperImg 超链接图片
 type HyperImg struct {
-	Image string `json:"path"`
+	Image string `json:"image"`
 	Link  string `json:"link"`
 	Title string `json:"title"`
 }

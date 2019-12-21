@@ -18,10 +18,10 @@ var ImgURLMap = map[string][]string{
 	"swiper02":    []string{"", "/"},
 	"swiper03":    []string{"", "/"},
 	"swiper04":    []string{"", "/"},
-	"recommand01": []string{"推荐1", "/"},
-	"recommand02": []string{"推荐2", "/"},
-	"recommand03": []string{"推荐3", "/"},
-	"recommand04": []string{"推荐4", "/"},
+	"recommand01": []string{"女装", "/"},
+	"recommand02": []string{"上衣", "/"},
+	"recommand03": []string{"套装", "/"},
+	"recommand04": []string{"包包", "/"},
 }
 
 const (
