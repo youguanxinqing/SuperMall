@@ -21,3 +21,8 @@ func HomeMultiData(ctx iris.Context) {
 		},
 	})
 }
+
+// HomeData ...
+func HomeData(ctx iris.Context) {
+	ctx.JSON(iris.Map{})
+}

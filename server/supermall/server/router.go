@@ -22,6 +22,7 @@ func NewApplication() *iris.Application {
 	// 动态资源
 	app.PartyFunc("/home", func(home iris.Party) {
 		home.Get("/multidata", api.HomeMultiData)
+		home.Get("/data", api.HomeData)
 	})
 
 	return app
