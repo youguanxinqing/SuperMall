@@ -9,4 +9,5 @@ type Img struct {
 type HyperImg struct {
 	Image string `json:"path"`
 	Link  string `json:"link"`
+	Title string `json:"title"`
 }

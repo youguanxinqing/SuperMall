@@ -5,6 +5,7 @@ import (
 	"io/ioutil"
 	"os"
 	"path/filepath"
+	"strings"
 
 	"supermall/config"
 	"supermall/model"
@@ -32,24 +33,31 @@ func BindHyperImgsByDir(dir string) ([]model.HyperImg, error) {
 // generateHyperImg 生成 HyperImg
 func generateHyperImg(dir, filename string) model.HyperImg {
 	path := dir + string(os.PathSeparator) + filename
-
-	fileNoExt := filepath.Base(filename)
+	fileNoExt := trimExt(filename)
 	// 从配置文件中查找图片对应的 url, 如果不存在, 默认为首页
-	url, ok := config.ImgURLMap[fileNoExt]
-	var urlPath string
+	fmt.Println(fileNoExt)
+	infos, ok := config.ImgURLMap[fileNoExt]
+	var title, urlPath string
 	if !ok {
 		urlPath = "/"
+		title = ""
 	} else {
-		urlPath = url
+		urlPath = infos[config.URLPATH]
+		title = infos[config.TITLE]
 	}
-
-	link := fmt.Sprintf(
-		"http://%s:%d%s",
-		config.ServerHost, config.ServerPort, urlPath,
-	)
 
 	return model.HyperImg{
-		Image: path,
-		Link:  link,
+		Image: NormalPathToURL(path),
+		Link:  CompleteURLPath(urlPath),
+		Title: title,
 	}
+}
+
+// 移除文件的扩展名
+// eg:
+// zhong.jpg => zhong
+func trimExt(path string) string {
+	filename := filepath.Base(path)
+	ext := filepath.Ext(filename)
+	return strings.Trim(filename, ext)
 }
