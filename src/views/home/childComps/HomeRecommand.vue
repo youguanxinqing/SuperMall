@@ -23,9 +23,8 @@ export default {
 #home-recommand {
   display: flex;
   text-align: center;
-  /* margin: 8px 0; */
-  padding-bottom: 17px;
-  border-bottom: 13px solid #eee8e8;
+  padding-bottom: 20px;
+  border-bottom: 15px solid #eee;
 }
 
 #home-recommand a {

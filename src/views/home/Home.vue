@@ -3,21 +3,26 @@
     <nav-bar></nav-bar>
     <home-swiper :banners="banners"></home-swiper>
     <home-recommand :recommands="recommands"></home-recommand>
+    <home-feature></home-feature>
   </div>
 </template>
 
 <script>
+import { getHomeMultiData } from 'network/home'
+
 import NavBar from './childComps/NavBar'
 import HomeSwiper from './childComps/HomeSwiper'
 import HomeRecommand from './childComps/HomeRecommand'
-import { getHomeMultiData } from 'network/home'
+import HomeFeature from './childComps/HomeFeature'
+
 
 export default {
   name: "Home",
   components: {
     NavBar,
     HomeSwiper,
-    HomeRecommand
+    HomeRecommand,
+    HomeFeature
   },
   data() {
     return { 
