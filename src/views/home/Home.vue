@@ -4,6 +4,10 @@
     <home-swiper :banners="banners"></home-swiper>
     <home-recommand :recommands="recommands"></home-recommand>
     <home-feature></home-feature>
+    <home-tab-control class="position-tab"></home-tab-control>
+    
+    <!-- 伪造数据 -->
+    <div v-for="(x, i) in Array(fakeNum)" :key="i">{{ i }}</div>
   </div>
 </template>
 
@@ -14,6 +18,7 @@ import NavBar from './childComps/NavBar'
 import HomeSwiper from './childComps/HomeSwiper'
 import HomeRecommand from './childComps/HomeRecommand'
 import HomeFeature from './childComps/HomeFeature'
+import HomeTabControl from './childComps/HomeTabControl'
 
 
 export default {
@@ -22,12 +27,15 @@ export default {
     NavBar,
     HomeSwiper,
     HomeRecommand,
-    HomeFeature
+    HomeFeature,
+    HomeTabControl
   },
   data() {
     return { 
       banners: [],
-      recommands: []
+      recommands: [],
+      
+      fakeNum: 100,  /* 伪造数据 */
     }
   },
   created() {
@@ -44,5 +52,11 @@ export default {
 </script>
 
 <style>
+
+/* 临时用法 */
+.position-tab {
+  position: sticky;
+  top: 0px;
+}
 
 </style>
