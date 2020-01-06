@@ -24,5 +24,14 @@ func HomeMultiData(ctx iris.Context) {
 
 // HomeData ...
 func HomeData(ctx iris.Context) {
-	ctx.JSON(iris.Map{})
+	typeValue := ctx.URLParam("type")
+	page, _ := ctx.URLParamInt("page")
+	data, err := service.HomeDataService(typeValue, page)
+	if err != nil {
+		ctx.JSON(iris.Map{
+			"error": err.Error(),
+		})
+		return
+	}
+	ctx.JSON(data)
 }

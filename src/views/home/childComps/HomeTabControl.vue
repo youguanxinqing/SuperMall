@@ -1,6 +1,6 @@
 <template>
   <div id="home-tab-control">
-    <tab-control :fields="['慧慧', '庭英', '我是']"></tab-control>
+    <tab-control :fields="['流行', '新款', '精选']"></tab-control>
   </div>
 </template>
 

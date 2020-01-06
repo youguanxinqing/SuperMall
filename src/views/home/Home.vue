@@ -12,7 +12,10 @@
 </template>
 
 <script>
-import { getHomeMultiData } from 'network/home'
+import { 
+  getHomeMultiData,
+  getHomeGoods,
+} from 'network/home'
 
 import NavBar from './childComps/NavBar'
 import HomeSwiper from './childComps/HomeSwiper'
@@ -34,6 +37,11 @@ export default {
     return { 
       banners: [],
       recommands: [],
+      goods: {
+        pop: {page: 0, list: []},
+        news: {page: 0, list: []},
+        sell: {page: 0, list: []},
+      },
       
       fakeNum: 100,  /* 伪造数据 */
     }
@@ -43,6 +51,14 @@ export default {
     .then(resp => {
       this.banners = resp.data.banners
       this.recommands = resp.data.recommands
+    })
+    .catch(err => {
+      console.log(err)
+    })
+
+    getHomeGoods('pop', 1)
+    .then(resp => {
+      console.log('success')
     })
     .catch(err => {
       console.log(err)

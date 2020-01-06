@@ -1,6 +1,7 @@
 package service
 
 import (
+	"fmt"
 	"supermall/config"
 	"supermall/tools"
 
@@ -28,4 +29,17 @@ func HomeMultiDataService() ([]iris.Map, []iris.Map, []iris.Map, []iris.Map) {
 		[]iris.Map{},
 		[]iris.Map{},
 		generateImgInfoByDir(recommandImgDir) // 推荐
+}
+
+// HomeDataService 组装首页数组
+func HomeDataService(typeValue string, page int) (map[string]interface{}, error) {
+	data, ok := config.GoodsData[typeValue]
+	if !ok {
+		return nil, fmt.Errorf("no %s data", typeValue)
+	}
+	// 对 Goods.json 格式判断
+	if dataWithType, ok := data.(map[string]interface{}); ok {
+		return dataWithType, nil
+	}
+	return nil, fmt.Errorf("file Goods.json error formater")
 }

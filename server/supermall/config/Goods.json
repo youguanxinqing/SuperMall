@@ -1,13 +1,42 @@
 {
-  "list": [
-    {
-      "id": "000001",
-      "image": "",
-      "link": "",
-      "title": "",
-      "fav": 0,
-      "orgPrice": 129,
-      "price": 120
-    }
-  ]
+  "pop": {
+    "list": [
+      {
+        "id": "000001",
+        "image": "/static/img/goods/good01.jpg",
+        "link": "",
+        "title": "小熊刺绣立体蝴蝶结圆领长袖减龄卫衣k",
+        "fav": 0,
+        "orgPrice": 121,
+        "price": 10
+      },
+      {
+        "id": "000002",
+        "image": "/static/img/goods/good02.jpg",
+        "link": "",
+        "title": "Go Girl Go 修身显瘦弹力圆领内搭打底衫女贴身亲肤长袖T恤EF5181",
+        "fav": 0,
+        "orgPrice": 29,
+        "price": 12
+      },
+      {
+        "id": "000003",
+        "image": "/static/img/goods/good03.jpg",
+        "link": "",
+        "title": "MIUCO喇叭袖波点网纱衬衫+钉珠V领收腰背心裙连衣裙女2019冬新款k",
+        "fav": 1,
+        "orgPrice": 129,
+        "price": 110
+      },
+      {
+        "id": "000004",
+        "image": "/static/img/goods/good04.jpg",
+        "link": "",
+        "title": "2019秋冬新款韩版宽松格纹腰带显瘦短款外套女复古千鸟格呢子大衣",
+        "fav": 1,
+        "orgPrice": 129,
+        "price": 110
+      }
+    ]
+  }
 }
