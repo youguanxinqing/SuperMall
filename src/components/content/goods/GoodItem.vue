@@ -35,13 +35,22 @@ export default {
   flex: 1;
   width: 47%;
   font-size: 12px;
-  margin-top: 5px;
+  margin: 5px 0 15px;
+  justify-content: space-around;
+}
+
+img {
+  margin-bottom: 5px;
+  width: 95%;
+  height: 95%;
 }
 
 .item-title {
   display: block;
-  width: 100%;
-  overflow: hidden;
+  width: 98%;
+  height: 12px;
+  white-space: nowrap;
+  overflow:hidden;
   text-overflow: ellipsis;
   color: #888;
   margin: 0px;
