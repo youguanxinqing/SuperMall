@@ -39,7 +39,9 @@ func HomeDataService(typeValue string, page int) (map[string]interface{}, error)
 	}
 	// 对 Goods.json 格式判断
 	if dataWithType, ok := data.(map[string]interface{}); ok {
-		return dataWithType, nil
+		return map[string]interface{}{
+			typeValue: dataWithType, // 流行
+		}, nil
 	}
 	return nil, fmt.Errorf("file Goods.json error formater")
 }

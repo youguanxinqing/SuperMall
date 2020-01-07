@@ -33,5 +33,7 @@ func HomeData(ctx iris.Context) {
 		})
 		return
 	}
-	ctx.JSON(data)
+	ctx.JSON(iris.Map{
+		"data": data,
+	})
 }
