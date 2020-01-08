@@ -21,4 +21,9 @@ export default {
 </script>
 
 <style>
+
+#home-tab-control {
+  margin-bottom: 5px;
+}
+
 </style>

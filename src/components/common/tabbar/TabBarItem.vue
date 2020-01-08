@@ -47,6 +47,7 @@ export default {
 
 .img-box img {
   width: 44%;
+  margin: 0;
 }
 
 </style>
